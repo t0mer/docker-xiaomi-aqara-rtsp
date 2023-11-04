@@ -1,4 +1,4 @@
-FROM ubuntu:latest
+FROM ubuntu:20.04
 
 # set workdir
 WORKDIR /usr/src/app
@@ -7,10 +7,8 @@ WORKDIR /usr/src/app
 RUN apt update -yqq
 RUN apt install -yqq wget
 
-RUN wget http://archive.ubuntu.com/ubuntu/pool/universe/libl/liblivemedia/liblivemedia-dev_2020.01.19-1build1_amd64.deb
-RUN dpkg -i liblivemedia-dev_2020.01.19-1build1_amd64.deb
 
-RUN apt -y install  libjson-c-dev python3-pip
+RUN apt -y install  libjson-c-dev python3-pip liblivemedia-dev
 
 # cleanup
 RUN apt clean && \
