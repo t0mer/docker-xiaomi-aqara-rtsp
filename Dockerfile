@@ -5,6 +5,7 @@ WORKDIR /usr/src/app
 
 # install dependencies
 RUN apt update -yqq
+RUN apt install -yqq wget
 
 RUN wget http://archive.ubuntu.com/ubuntu/pool/universe/libl/liblivemedia/liblivemedia-dev_2020.01.19-1build1_amd64.deb
 RUN dpkg -i liblivemedia-dev_2020.01.19-1build1_amd64.deb
