@@ -1,11 +1,11 @@
-FROM python:3.9
+FROM ubuntu:latest
 
 # set workdir
 WORKDIR /usr/src/app
 
 # install dependencies
 RUN apt update -yqq && \
-	apt -y install liblivemedia-dev libjson-c-dev
+	apt -y install liblivemedia-dev libjson-c-dev python3-pip
 
 # cleanup
 RUN apt clean && \
