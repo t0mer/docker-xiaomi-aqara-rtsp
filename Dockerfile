@@ -19,7 +19,8 @@ RUN apt clean && \
 RUN pip3 install python-miio
 
 # clone code
-RUN git clone https://github.com/pccr10001/videoP2Proxy.git .
+RUN git clone https://github.com/pccr10001/videoP2Proxy.git
+WORKDIR videoP2Proxy
 
 # build code
 RUN ./autogen.sh
