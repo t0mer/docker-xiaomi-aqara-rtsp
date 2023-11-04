@@ -6,7 +6,10 @@ WORKDIR /usr/src/app
 # install dependencies
 RUN apt update -yqq
 
-run apt -y install liblivemedia-dev libjson-c-dev python3-pip
+RUN wget http://archive.ubuntu.com/ubuntu/pool/universe/libl/liblivemedia/liblivemedia-dev_2020.01.19-1build1_amd64.deb
+RUN dpkg -i liblivemedia-dev_2020.01.19-1build1_amd64.deb
+
+RUN apt -y install  libjson-c-dev python3-pip
 
 # cleanup
 RUN apt clean && \
