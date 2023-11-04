@@ -4,11 +4,11 @@ FROM python:3.9
 WORKDIR /usr/src/app
 
 # install dependencies
-RUN apt-get update && apt-get -y dist-upgrade && \
-	apt-get -y install liblivemedia-dev libjson-c-dev
+RUN apt update -yqq && \
+	apt -y install liblivemedia-dev libjson-c-dev
 
 # cleanup
-RUN apt-get clean && \
+RUN apt clean && \
     rm -rf /var/lib/apt/lists/* && \
     rm -rf /tmp/*
 
