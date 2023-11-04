@@ -4,8 +4,9 @@ FROM ubuntu:latest
 WORKDIR /usr/src/app
 
 # install dependencies
-RUN apt update -yqq && \
-	apt -y install liblivemedia-dev libjson-c-dev python3-pip
+RUN apt update -yqq
+
+run apt -y install liblivemedia-dev libjson-c-dev python3-pip
 
 # cleanup
 RUN apt clean && \
