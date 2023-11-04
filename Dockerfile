@@ -1,4 +1,4 @@
-FROM python:3-stretch
+FROM python:3.9-stretch
 
 # set workdir
 WORKDIR /usr/src/app
@@ -16,7 +16,7 @@ RUN apt-get clean && \
 RUN pip3 install python-miio
 
 # clone code
-RUN git clone https://github.com/miguelangel-nubla/videoP2Proxy.git .
+RUN git clone https://github.com/pccr10001/videoP2Proxy.git .
 
 # build code
 RUN ./autogen.sh
