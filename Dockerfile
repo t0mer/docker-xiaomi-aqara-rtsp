@@ -5,9 +5,8 @@ WORKDIR /usr/src/app
 
 # install dependencies
 RUN apt update -yqq
-RUN apt install -yqq wget
 
-RUN apt -y install  libjson-c-dev python3-pip liblivemedia-dev git build-essential ython3-dev autoconf automake libtool 
+RUN apt -y install libjson-c-dev python3-pip liblivemedia-dev git build-essential python3-dev autoconf automake libtool 
 
 # cleanup
 RUN apt clean && \
