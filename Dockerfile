@@ -8,7 +8,7 @@ RUN apt update -yqq
 RUN apt install -yqq wget
 
 
-RUN apt -y install  libjson-c-dev python3-pip liblivemedia-dev
+RUN apt -y install  libjson-c-dev python3-pip liblivemedia-dev git
 
 # cleanup
 RUN apt clean && \
